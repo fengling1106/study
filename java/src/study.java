@@ -68,11 +68,11 @@ public class study {
 		//DealClass.ShowClassProperty();
 		
 		//FieldTest.UseField();
-		//TestForumService.UseAOP(args);
+		TestForumService.UseAOP(args);
 		
-		TalkServer.TServer();
-		Thread.currentThread().sleep(2);
-		Client.Tclient();
+		//TalkServer.TServer();
+		//Thread.currentThread().sleep(2);
+		//Client.Tclient();
 		
 		//httpclient.getObjForByJsonPost("http://localhost:8080/future/query/UserInfo.html");
 		//httpclient.JsonByPost("http://localhost:8080/future/query/UserInfo.html");
