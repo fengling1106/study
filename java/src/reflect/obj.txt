@@ -1,0 +1,3 @@
+a=java.util.Date
+b=javax.swing.JFrame
+b%title=Test 123
