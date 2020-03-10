@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>vue 模板语法-插值</title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app" >
+			<div id="app5" v-bind:class="show">
+				{{a}}
+				test
+			</div>
+		</div>	
+		<script type="text/javascript">
+		var v_data = {a: 1, show: 'showblue'};
+		var vm = new Vue({
+			el: "#app5",
+			data: v_data
+			});	  
+		sleep(2000);			
+		v_data.show = 'showyellow';
+		console.log(v_data.show);
+		v_data.a = 2;
+		sleep(2000);
+		v_data.show = 'showblue';
+		console.log(v_data.show);
+		//参数n为休眠时间，单位为毫秒:
+		function sleep(n) {
+			var start = new Date().getTime();
+			//  console.log('休眠前：' + start);
+			while (true) {
+				if (new Date().getTime() - start > n) {
+					break;
+				}
+			}
+			// console.log('休眠后：' + new Date().getTime());
+		}		
+		</script>
+		<style type="text/css">
+			.showblue{color: blue;}
+			.showred{color: red;}
+			.showyellow{color: yellow;}
+		</style>
+
+	</body>
+
+</html>
