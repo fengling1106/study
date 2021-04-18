@@ -18,6 +18,3 @@ while True:
         break
     print line,
 f.close()
-
-
-raw_input('Enter an integer: ')
