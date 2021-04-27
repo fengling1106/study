@@ -2,44 +2,23 @@
   <div id="app">
     <router-link to="/about">关于 \ </router-link>
     <router-link to="/home">首页</router-link>
-    <router-view/>
-    <v-news :title="title" :content="content"></v-news>
-    <v-list></v-list>
-    <v-add></v-add>
-    <v-dolist></v-dolist>
-    <v-counter :num="num" @add="add" @dec="dec"></v-counter>
+    <br/>
+    <router-link to="/page">测试页</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ValenNews from './components/ValenNews.vue'
-import ValenList from './components/ValenList.vue'
-import ValenAdd from './components/ValenAdd.vue'
-import ValenDolist from './components/ValenDolist.vue'
-import ValenCounter from './components/ValenCounter.vue'
-
 export default {
   name: 'App',
   components: {
-    'v-news': ValenNews,
-    'v-list': ValenList,
-    'v-add': ValenAdd,
-    'v-dolist': ValenDolist,
-    'v-counter': ValenCounter
+
   },
   methods: {
-    add: function () {
-      this.num++
-    },
-    dec: function () {
-      this.num--
-    }
+
   },
   data () {
     return {
-      title: '全球股市大跌',
-      content: '因为俄罗斯与沙特干架，所以股市大跌',
-      num: 0
     }
   }
 }
@@ -52,7 +31,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  background-color:deepskyblue;
+  margin-top: 5px;
+  width:1400px;
+  height: 600px;
+  border: rgb(240, 178, 209);
+  background-color:rgb(178, 224, 240);
 }
 </style>
